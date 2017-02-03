@@ -1,0 +1,67 @@
+ <h2 class="page-header">Commit</h2>
+<h5>Below are the Recent {{{data.length}}} commits of Node Repository</h5> 
+<div>
+{{#each data}}
+  {{#if this.isNum}}
+            <details>
+			  	<summary class="numcommit">{{this.sha}}</summary>
+			  	<table>	
+			  	  <tr>
+				    <td>Committer ID:</td>
+				    <td>{{this.author.id}}</td>
+				  </tr>
+				  <tr>
+				    <td>Commit Date:</td>
+				    <td>{{this.commit.committer.date}}</td>
+				  </tr>				  
+				  <tr>
+				    <td>Committer Name:</td>
+				    <td>{{this.commit.committer.name}}</td>
+				  </tr>
+				  <tr>
+				    <td>Committer email:</td>
+				    <td>{{this.commit.committer.email}}</td>
+				  </tr>
+				  <tr>
+				    <td>User Type:</td>
+				    <td>{{this.author.type}}</td>
+				  </tr>
+				  <tr>
+				    <td>Is User Site Admin:</td>
+				    <td>{{this.author.site_admin}}</td>
+				  </tr>
+				</table>
+			</details>
+            {{else}}
+            <details>
+			  	<summary>{{this.sha}}</summary>
+			  	<table>	
+			  	  <tr>
+				    <td>Committer ID:</td>
+				    <td>{{this.author.id}}</td>
+				  </tr>
+				  <tr>
+				    <td>Commit Date:</td>
+				    <td>{{this.commit.committer.date}}</td>
+				  </tr>				  
+				  <tr>
+				    <td>Committer Name:</td>
+				    <td>{{this.commit.committer.name}}</td>
+				  </tr>
+				  <tr>
+				    <td>Committer email:</td>
+				    <td>{{this.commit.committer.email}}</td>
+				  </tr>
+				  <tr>
+				    <td>User Type:</td>
+				    <td>{{this.author.type}}</td>
+				  </tr>
+				  <tr>
+				    <td>Is User Site Admin:</td>
+				    <td>{{this.author.site_admin}}</td>
+				  </tr>
+				</table>
+			</details>
+            {{/if}}
+  {{/each}}
+</div>
